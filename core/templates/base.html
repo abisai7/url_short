@@ -1,27 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>{% block title %} {% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
   </head>
   <body>
-    <div class="container mt-3">
-        {% for message in get_flashed_messages() %}
-            <div class="alert alert-danger">{{ message }}</div>
-        {% endfor %}
-        {% block content %} {% endblock %}
+    
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img
+              src="https://bulma.io/images/bulma-logo.png"
+              alt="Bulma: Free, open source, and modern CSS framework based on Flexbox"
+              width="112"
+              height="28"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero is-dark is-medium">
+      <div class="hero-body has-text-centered">
+        <p class="title">Shorty</p>
+        <p class="subtitle">A simple URL Shortener</p>
+      </div>
+    </section>
+
+    <div class="container">
+      {% for message in get_flashed_messages() %}
+      <div class="notification is-danger mt-3 mb-3">
+        <button class="delete"></button>
+        {{ message }}
+      </div>
+      {% endfor %} 
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <section class="container p-3">
+      {% block content %}
+      
+      {% endblock %}
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <ion-icon name="heart-outline"></ion-icon>
+          <strong>Shorty</strong> by
+          <a href="mailto:d_abisai7@outlook.com" rel="noreferrer">Abisai Herrera</a>. The source
+          code is licensed
+          <a
+            href="http://opensource.org/licenses/mit-license.php"
+            target="_blank" rel="noreferrer"
+            >MIT</a
+          >. The website content is licensed
+          <a
+            href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            target="_blank" rel="noreferrer"
+            >CC BY NC SA 4.0</a
+          >.
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
