@@ -9,31 +9,42 @@
             <form method="post" action="{{url_for('index')}}">
             <div class="field">
                 <label class="label" for="url">URL</label>
-                <div class="control">
-                <input class="input" type="text" name="url" id="url"
-                    placeholder="Enter looooooooooooong URL" class="form-control"
-                    value="{{ request.form['url'] }}" autofocus></input>
+                <div class="control has-icons-left">
+                    <input class="input" type="url" name="url" id="url"
+                        placeholder="Enter a long URL" class="form-control" required="required"
+                        value="{{ request.form['url'] }}" autofocus></input>
+                    <span class="icon is-small is-left">
+                        <ion-icon name="globe-outline"></ion-icon>
+                    </span>
                 </div>
 
             </div>
             <div class="field">
                 <label class="label" for="custom_id">Custom Short ID</label>
-                <div class="control">
-                <input class="input" type="text" name="custom_id" id="custom_id"
-                    placeholder="Want to customise? (optional)" class="form-control"
-                    value="{{ request.form['custom_id'] }}"></input>
+                <div class="control has-icons-left">
+                    <input class="input" type="text" name="custom_id" id="custom_id"
+                        placeholder="Want to customise? (optional)" class="form-control"
+                        value="{{ request.form['custom_id'] }}"></input>
+                    <span class="icon is-small is-left">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </span>
                 </div>
             </div>
 
             <div class="control mt-3 mb-3">
-                <button type="submit" class="button is-primary is-fullwidth">Go Shorty!</button>
+                <button id="submit" type="submit" disabled="disabled" class="button is-primary is-fullwidth">
+                    <span class="icon is-small">
+                        <ion-icon name="cut-outline"></ion-icon>
+                    </span>
+                    <span>Go Shorty!</span>   
+                </button>
               </div>
 
             </form>
 
             {% if short_url %}
             <hr>
-            <span><a href="{{ short_url }}" target="_blank">{{ short_url }}</a></span>
+            <span><a href="{{ short_url }}" target="_blank" rel="noreferrer">{{ short_url }}</a></span>
             {% endif %}
         </div>
         <div class="col-md-2"></div>

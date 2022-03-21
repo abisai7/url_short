@@ -14,17 +14,54 @@
     />
   </head>
   <body>
-    
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="https://bulma.io">
-            <img
-              src="https://bulma.io/images/bulma-logo.png"
-              alt="Bulma: Free, open source, and modern CSS framework based on Flexbox"
-              width="112"
-              height="28"
-            />
+            <svg
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="25px"
+              x="20px"
+              y="20px"
+              viewBox="0 0 309.694 309.694"
+              style="enable-background: new 0 0 309.694 309.694"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  d="M169.941,182.463l125.645,40.038c1.703,0.543,3.566,0.102,4.846-1.145c1.28-1.248,1.767-3.1,1.268-4.816
+		c-5.93-20.375-21.613-36.46-41.832-42.903l-103.221-32.893l-8.899-27.925c0.832-0.193,1.656-0.416,2.472-0.676
+		c20.449-6.517,30.154-31.434,22.095-56.726c-7.803-24.488-30.171-40.075-50.842-33.485c-19.629,6.254-30.345,30.837-22.096,56.728
+		c0.017,0.052,0.035,0.102,0.052,0.153l15.499,48.637l-48.583-15.481c-0.069-0.022-0.137-0.048-0.206-0.07
+		c-24.616-7.844-50.126,1.376-56.729,22.097c-6.516,20.449,8.193,42.781,33.485,50.841c24.63,7.848,50.126-1.384,56.727-22.095
+		c0.262-0.821,0.477-1.646,0.671-2.472l27.929,8.899l22.001,69.042h37.483L169.941,182.463z M76.755,155.453
+		c-2.157,6.771-14.017,10.517-26.572,6.515c-13.105-4.176-19.955-14.255-17.905-20.688c2.154-6.763,14.004-10.52,26.574-6.516
+		C71.957,138.94,78.805,149.019,76.755,155.453z M128.76,44.799c6.577-2.101,16.574,4.996,20.688,17.905
+		c4.176,13.104-0.082,24.521-6.515,26.571c-6.595,2.106-16.585-5.024-20.688-17.903C118.267,58.891,121.972,46.962,128.76,44.799z
+		 M151.869,164.391c-3.945,3.945-10.343,3.945-14.288,0c-3.946-3.946-3.946-10.343,0-14.289c3.945-3.945,10.343-3.945,14.288,0
+		C155.816,154.048,155.816,160.444,151.869,164.391z"
+                />
+                <path
+                  d="M56.5,264.278H19.904H12.5c-6.903,0-12.5,5.597-12.5,12.5c0,6.903,5.597,12.5,12.5,12.5h7.404H56.5
+		c6.903,0,12.5-5.597,12.5-12.5C69,269.875,63.403,264.278,56.5,264.278z"
+                />
+                <path
+                  d="M136.732,264.278h-44c-6.903,0-12.5,5.597-12.5,12.5c0,6.903,5.597,12.5,12.5,12.5h44c6.903,0,12.5-5.597,12.5-12.5
+		C149.232,269.875,143.635,264.278,136.732,264.278z"
+                />
+                <path
+                  d="M216.963,264.278h-44c-6.903,0-12.5,5.597-12.5,12.5c0,6.903,5.597,12.5,12.5,12.5h44c6.903,0,12.5-5.597,12.5-12.5
+		C229.463,269.875,223.866,264.278,216.963,264.278z"
+                />
+                <path
+                  d="M301.893,265.199c-1.451-0.589-3.035-0.921-4.698-0.921h-44c-6.903,0-12.5,5.597-12.5,12.5c0,6.903,5.597,12.5,12.5,12.5
+		h44c1.663,0,3.247-0.332,4.698-0.921c4.573-1.858,7.802-6.339,7.802-11.579C309.694,271.538,306.466,267.058,301.893,265.199z"
+                />
+              </g>
+            </svg>
           </a>
         </div>
       </div>
@@ -43,36 +80,41 @@
         <button class="delete"></button>
         {{ message }}
       </div>
-      {% endfor %} 
+      {% endfor %}
     </div>
 
-    <section class="container p-3">
-      {% block content %}
-      
-      {% endblock %}
-    </section>
+    <section class="container p-3">{% block content %} {% endblock %}</section>
 
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
-          <ion-icon name="heart-outline"></ion-icon>
           <strong>Shorty</strong> by
-          <a href="mailto:d_abisai7@outlook.com" rel="noreferrer">Abisai Herrera</a>. The source
-          code is licensed
+          <a href="mailto:d_abisai7@outlook.com" rel="noreferrer"
+            >Abisai Herrera</a
+          >. The source code is licensed
           <a
             href="http://opensource.org/licenses/mit-license.php"
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
             >MIT</a
           >. The website content is licensed
           <a
             href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
             >CC BY NC SA 4.0</a
           >.
         </p>
       </div>
     </footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

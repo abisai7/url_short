@@ -90,3 +90,7 @@ ENV/
 .ropeproject
 
 .DS_Store
+
+# Database file(s)
+*.sqlite3
+*.db
